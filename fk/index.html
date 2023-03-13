@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SimplestTodoList</title>
+
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.css"
+    />
+    <script
+      src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="vh-100" style="background-color: #eee">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-lg-9 col-xl-7">
+            <div class="card rounded-3">
+              <div class="card-body p-4">
+                <h4 class="text-center my-3 pb-3">Планировщик задач</h4>
+
+                <div
+                  class="row justify-content-center align-items-center mb-4 pb-2"
+                >
+                <div>
+                  <label id="label_id" >id=</label>
+                </div>
+                  <div class="col-lg-4">
+                    <input
+                      type="date"
+                      id="input-date-field"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-lg-4">
+                    <input
+                      type="text"
+                      id="input-task-field"
+                      class="form-control"
+                      placeholder="Введите задачу здесь"
+                    />
+                  </div>
+                  <div class="col-lg-2">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      onclick="buttonAddToDoItem_Click()"
+                    >
+                      Сохранить
+                    </button>
+                  </div>
+                  <div class="col-lg-2">
+                    <button
+                      type="submit"
+                      class="btn btn-info"
+                      onclick="buttonUpdateToDoItem_Click()"
+                    >
+                      Обновить
+                    </button>
+                  </div>
+                </div>
+                <div id="table-tasks-div">
+                  <table class="table mb-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">Дата</th>
+                        <th scope="col">Задача</th>
+                        <th scope="col">Действие</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>1.1.2023</td>
+                        <td>11111</td>
+                        <td>
+                          <button
+                            type="submit"
+                            class="btn btn-danger"
+                            onclick="buttonDeleteToDoItemById_Click(1)"
+                          >
+                            Удалить
+                          </button>
+                        </td>
+                        <td>
+                          <button
+                            type="submit"
+                            class="btn btn btn-warning"
+                            onclick="buttonGetToDoItem_Click(1)"
+                          >
+                            Выбрать
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>1.1.2023</td>
+                        <td>11111</td>
+                        <td>
+                          <button
+                            type="submit"
+                            class="btn btn-danger"
+                            onclick="buttonDeleteToDoItemById_Click(2)"
+                          >
+                            Удалить
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
